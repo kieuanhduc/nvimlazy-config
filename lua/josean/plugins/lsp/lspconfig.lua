@@ -65,6 +65,10 @@ return {
 
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+		 -- NEW: Jump to function symbols in buffer
+        opts.desc = "List function symbols"
+        keymap.set("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", opts)
       end,
     })
 
