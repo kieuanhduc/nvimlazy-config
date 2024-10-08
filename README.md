@@ -1,0 +1,1 @@
+# nvimlazy-config
