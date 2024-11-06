@@ -39,9 +39,11 @@ return {
       -- Diff
       map("n", "<leader>hd", function()
         gs.diffthis()
-        vim.cmd("wincmd L")  -- Chuyển cửa sổ diff sang bên phải
+        vim.cmd("wincmd L")  -- Move diff window to the right
+        -- Automatically close the diff view properly
+        vim.cmd("autocmd BufWinLeave <buffer> ++nested lua vim.cmd('windo close')")
       end, "Diff this")
-
+      
       -- Text object
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Gitsigns select hunk")
     end,
