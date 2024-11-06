@@ -13,6 +13,7 @@ return {
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
         css = { "prettier" },
+        scss = { "prettier" }, -- Thêm cấu hình cho SCSS
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
@@ -41,7 +42,7 @@ return {
 
     -- Autocommand để thiết lập khi mở các file kiểu JavaScript, TypeScript, HTML, v.v.
     vim.cmd([[
-      autocmd FileType javascript,typescript,javascriptreact,typescriptreact,svelte,css,html,json,yaml,markdown,graphql,liquid
+      autocmd FileType javascript,typescript,javascriptreact,typescriptreact,svelte,css,scss,html,json,yaml,markdown,graphql,liquid
       \ setlocal tabstop=4 shiftwidth=4 expandtab
     ]])
 
@@ -49,7 +50,7 @@ return {
     vim.cmd([[
       augroup SetPrettierTabWidth
         autocmd!
-        autocmd FileType javascript,typescript,javascriptreact,typescriptreact,svelte,css,html,json,yaml,markdown,graphql,liquid
+        autocmd FileType javascript,typescript,javascriptreact,typescriptreact,svelte,css,scss,html,json,yaml,markdown,graphql,liquid
         \ let b:conform_prettier_options = '--tab-width 4'
       augroup END
     ]])
