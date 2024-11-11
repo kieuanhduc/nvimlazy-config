@@ -22,8 +22,18 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- no hishgligh--[[ t ]]
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Resize window
+keymap.set("n", "<C-w>l", "<C-w><")
+keymap.set("n", "<C-w>h", "<C-w>>")
+keymap.set("n", "<C-w>k", "<C-w>+")
+keymap.set("n", "<C-w>j", "<C-w>-")
 
 -- vim map for clipboard
 keymap.set("v", "<C-c>", '"+y')
