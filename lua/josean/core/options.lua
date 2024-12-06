@@ -37,3 +37,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+opt.iskeyword:append("-") -- treat dash separated words as a word text object
