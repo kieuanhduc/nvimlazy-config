@@ -137,6 +137,16 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
+    ["dockerls"] = function()
+		lspconfig.dockerls.setup({
+			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+		})
+	end,
+            	["bashls"] = function()
+		lspconfig.bashls.setup({
+			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+		})
+	end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({

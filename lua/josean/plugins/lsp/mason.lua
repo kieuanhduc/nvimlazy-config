@@ -35,6 +35,8 @@ return {
         "lua_ls",
         "emmet_ls",
         "pyright",
+        "dockerls",
+        "bashls",
       },
     })
 
