@@ -3,6 +3,12 @@ return {
   lazy = true,
   config = function()
     require("nvim-treesitter.configs").setup({
+
+
+      highlight = {
+        enable = true,
+         additional_vim_regex_highlighting = false,
+      },
       textobjects = {
         select = {
           enable = true,

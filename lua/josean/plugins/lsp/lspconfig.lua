@@ -90,6 +90,24 @@ return {
           capabilities = capabilities,
         })
       end,
+     ["tsserver"] = function()
+		require("lspconfig").tsserver.setup({
+			settings = {
+				javascript = {
+					format = {
+						indentSize = 4,
+						convertTabsToSpaces = false,
+					},
+				},
+				typescript = {
+					format = {
+						indentSize = 4,
+						convertTabsToSpaces = false,
+					},
+				},
+			},
+		})
+      end,
       ["svelte"] = function()
         -- configure svelte server
         lspconfig["svelte"].setup({
