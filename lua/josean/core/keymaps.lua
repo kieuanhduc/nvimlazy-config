@@ -57,3 +57,27 @@ keymap.set("n", "r", ":redo<CR>", { noremap = true, silent = true })
 
 keymap.set("n", "cc", ":CopilotChat<CR>", { noremap = true, silent = true })
 keymap.set("n", "cp", ":CopilotChatPanel<CR>", { noremap = true, silent = true })
+
+-- Chuyển toàn bộ từ thành chữ hoa trong chế độ normal:
+vim.keymap.set("n", "<leader>u", "gUiw", { noremap = true, silent = true })
+
+--Chuyển toàn bộ dòng thành chữ hoa:
+vim.keymap.set("n", "<leader>U", "gUU", { noremap = true, silent = true })
+
+
+-- Chuyển toàn bộ từ thành chữ thường trong chế độ normal
+vim.keymap.set("n", "<leader>l", "guiw", { noremap = true, silent = true })
+
+-- Chuyển toàn bộ dòng thành chữ thường trong chế độ normal
+vim.keymap.set("n", "<leader>L", "guu", { noremap = true, silent = true })
+
+-- Chuyển chữ hoa thành chữ thường trong chế độ visual
+vim.keymap.set("v", "<leader>l", "gu", { noremap = true, silent = true })
+
+
+vim.keymap.set('n', '<leader>r', function()
+    vim.cmd('NvimTreeRefresh')  -- Reload folder
+    vim.notify("Folder reloaded successfully!", vim.log.levels.INFO)  -- Thông báo
+end, { noremap = true, silent = true })
+
+

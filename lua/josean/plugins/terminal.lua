@@ -27,6 +27,6 @@ return {
       })
   
       -- Thêm phím tắt để mở terminal modal
-      vim.api.nvim_set_keymap('n', 'tt', ':ToggleTerm<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', 'tn', ':ToggleTerm<CR>', { noremap = true, silent = true })
     end,
   }
