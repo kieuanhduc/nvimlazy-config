@@ -80,4 +80,5 @@ vim.keymap.set('n', '<leader>r', function()
     vim.notify("Folder reloaded successfully!", vim.log.levels.INFO)  -- Thông báo
 end, { noremap = true, silent = true })
 
+vim.keymap.set("n", "<leader>r", ":e!<CR>", { desc = "Reload current file" })
 
